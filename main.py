@@ -175,13 +175,13 @@ async def on_ready():
     print(f"Logged in as {bot.user} ({bot.user.id})")
     print(f"Prefix: {bot.command_prefix}")
 HELP_MAIN = """```
---- Ryuu SelfBot ---
+--- Will SelfBot ---
 
 `,help`           -> this menu
 `,help <topic>`   -> sub-commands for a feature
 `,files`          -> list .txt files
 
-Topics:
+Features:
   ab    -> autobeef
   al    -> autoladder
   ak    -> autokill
@@ -198,11 +198,6 @@ Topics:
   aafk  -> antiafk
   alias -> aliases
   global-> global settings
-
-Examples:
-  ,help spam
-  ,help ak
-  ,help ap
 ```"""
 
 HELP_GLOBAL = """```
