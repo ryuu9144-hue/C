@@ -257,7 +257,7 @@ async def on_message_edit(before, after):
 # HELP
 # =========================================================
 HELP_TEXT = """```
---- Ryuu/Celeis SB ---
+--- Will SB ---
 
 AI:
   ,ai <question>            
