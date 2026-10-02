@@ -4,7 +4,7 @@ import asyncio
 import random
 import os
 import time
-import jso
+import json
 
 TOKEN = os.getenv("DISCORD_TOKEN", "PUT_YOUR_TOKEN_HERE")
 PREFIX = ","
