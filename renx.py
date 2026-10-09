@@ -10,6 +10,20 @@ import json
 from collections import deque
 from datetime import datetime
 from groq import Groq
+# ========== DUMMY WEB SERVER (so Render Web Service detects a port) ==========
+import threading
+from flask import Flask
+
+_render_app = Flask(__name__)
+
+@_render_app.route("/")
+def _health():
+    return "ok", 200
+
+def _run_render_web():
+    _render_app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
+
+threading.Thread(target=_run_render_web, daemon=True).start()
 
 # ========== CONFIGURATION ==========
 TOKEN = os.getenv("TOKEN") # Your main Discord user token
